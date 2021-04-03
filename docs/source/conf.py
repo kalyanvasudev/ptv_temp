@@ -8,7 +8,7 @@ import mock
 # -- Project information -----------------------------------------------------
 import pytorch_sphinx_theme
 from recommonmark.parser import CommonMarkParser
-
+from recommonmark.transform import AutoStructify
 
 # -- Path setup --------------------------------------------------------------
 sys.path.insert(0, os.path.abspath("../"))
@@ -110,7 +110,7 @@ master_doc = "index"
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
-
+autodoc_typehints = "description"
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
@@ -139,6 +139,14 @@ html_theme_path = [pytorch_sphinx_theme.get_html_theme_path()]
 #     "collapse_navigation": False,  # default
 #     "display_version": True,  # default
 # }
+
+html_theme_options = {
+    "includehidden": False,
+    "canonical_url": "https://kalyanvasudev.github.io/api/",
+    "pytorch_project": "docs",
+}
+
+html_baseurl = "/"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -181,19 +189,15 @@ texinfo_documents = [
     )
 ]
 
+github_doc_root = "https://github.com/facebookresearch/pytorchvideo/tree/master"
 
 def setup(app):
-    from recommonmark.transform import AutoStructify
-
     app.add_config_value(
         "recommonmark_config",
         {
+            "url_resolver": lambda url: github_doc_root + url,
             "auto_toc_tree_section": "Contents",
-            "enable_math": True,
-            "enable_inline_math": True,
-            "enable_eval_rst": True,
-            "enable_auto_toc_tree": True,
         },
         True,
     )
-    return app
+    app.add_transform(AutoStructify)
