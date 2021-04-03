@@ -1,6 +1,0 @@
-Layers
-==================
-
-.. toctree::
-
-    layers
