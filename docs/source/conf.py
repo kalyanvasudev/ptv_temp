@@ -142,7 +142,7 @@ html_theme_path = [pytorch_sphinx_theme.get_html_theme_path()]
 
 html_theme_options = {
     "includehidden": False,
-    "canonical_url": "https://kalyanvasudev.github.io/api/",
+    "canonical_url": "https://kalyanvasudev.github.io/ptv_temp/api/",
     "pytorch_project": "docs",
 }
 
