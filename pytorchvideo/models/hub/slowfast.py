@@ -1,8 +1,11 @@
+# Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved.
+
 from typing import Any
 
 import torch.nn as nn
 from pytorchvideo.models.slowfast import create_slowfast
 from torch.hub import load_state_dict_from_url
+
 
 root_dir = "https://dl.fbaipublicfiles.com/pytorchvideo/model_zoo/kinetics"
 checkpoint_paths = {
