@@ -1,7 +1,7 @@
 
 
 
-## PyTorchVideo Model Zoo and Benchmarks
+## Model Zoo and Benchmarks
 
 PyTorchVideo provides reference implementation of a large number of video understanding approaches. In this document, we also provide comprehensive benchmarks to evaluate the supported models on different datasets using standard evaluation setup. All the models can be downloaded from the provided links.
 
