@@ -6,7 +6,6 @@ import logging
 import time
 from typing import Callable, Dict, List, Optional
 
-import cv2
 import numpy as np
 import torch
 import torch.utils.data
@@ -15,6 +14,14 @@ from pytorchvideo.data.utils import optional_threaded_foreach
 
 from .utils import thwc_to_cthw
 from .video import Video
+
+
+try:
+    import cv2
+except ImportError:
+    _HAS_CV2 = False
+else:
+    _HAS_CV2 = True
 
 
 logger = logging.getLogger(__name__)
@@ -46,6 +53,12 @@ class FrameVideo(Video):
             multithreaded_io (bool):  controls whether parllelizable io operations are
                 performed across multiple threads.
         """
+        if not _HAS_CV2:
+            raise ImportError(
+                "opencv2 is required to use FrameVideo. Please "
+                "install with 'pip install opencv-python'"
+            )
+
         self._duration = duration
         self._fps = fps
 

@@ -3,7 +3,7 @@
 
 import os
 
-from setuptools import find_namespace_packages, find_packages, setup
+from setuptools import find_packages, setup
 
 
 def get_version():
@@ -11,7 +11,9 @@ def get_version():
         os.path.abspath(os.path.dirname(__file__)), "pytorchvideo", "__init__.py"
     )
     init_py = open(init_py_path, "r").readlines()
-    version_line = [l.strip() for l in init_py if l.startswith("__version__")][0]
+    version_line = [
+        lines.strip() for lines in init_py if lines.startswith("__version__")
+    ][0]
     version = version_line.split("=")[-1].strip().strip("'\"")
 
     # Used by CI to build nightly packages. Users should never use it.
@@ -46,7 +48,7 @@ setup(
     license="Apache 2.0",
     author="Facebook AI",
     url="https://github.com/facebookresearch/pytorchvideo",
-    description="A video research library providing pytorch-based components.",
+    description="A video understanding deep learning library.",
     python_requires=">=3.7",
     install_requires=[
         "fvcore>=0.1.4",
@@ -57,6 +59,7 @@ setup(
     extras_require={
         "test": ["coverage", "pytest", "opencv-python"],
         "dev": [
+            "opencv-python",
             "black==20.8b1",
             "sphinx",
             "isort==4.3.21",
@@ -67,6 +70,9 @@ setup(
             "nbconvert",
             "bs4",
             "autoflake==1.4",
+        ],
+        "opencv-python": [
+            "opencv-python",
         ],
     },
     packages=find_packages(exclude=("scripts", "tests")),

@@ -3,9 +3,16 @@
 import math
 from typing import Tuple
 
-import cv2
 import numpy as np
 import torch
+
+
+try:
+    import cv2
+except ImportError:
+    _HAS_CV2 = False
+else:
+    _HAS_CV2 = True
 
 
 def uniform_temporal_subsample(
@@ -46,6 +53,12 @@ def _interpolate_opencv(
         interpolation: model to perform interpolation, options include `nearest`,
             `linear`, `bilinear`, `bicubic`.
     """
+    if not _HAS_CV2:
+        raise ImportError(
+            "opencv is required to use opencv transforms. Please "
+            "install with 'pip install opencv-python'."
+        )
+
     _opencv_pytorch_interpolation_map = {
         "nearest": cv2.INTER_NEAREST,
         "linear": cv2.INTER_LINEAR,

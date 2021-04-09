@@ -7,6 +7,11 @@
 For stable release,
 ```
 pip install pytorchvideo
+=======
+conda create -n pytorchvideo python=3.7
+conda activate pytorchvideo
+conda install -c pytorch pytorch=1.8.0 torchvision cudatoolkit=10.2
+conda install -c conda-forge -c fvcore -c iopath fvcore=0.1.4 iopath
 ```
 
 For nighly builds,
@@ -26,7 +31,7 @@ pip install "git+https://github.com/facebookresearch/pytorchvideo.git@stable"
 ### 3. Install from a local clone
 ```
 git clone https://github.com/facebookresearch/pytorchvideo.git
-cd pytorchvideo 
+cd pytorchvideo
 pip install -e .
 
 # For developing and testing
