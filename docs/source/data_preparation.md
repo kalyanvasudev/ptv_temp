@@ -39,10 +39,7 @@ We follow [PySlowFast](https://github.com/facebookresearch/SlowFast/blob/master/
 2. Download the *frame list* from the following links: ([train](https://dl.fbaipublicfiles.com/pyslowfast/dataset/ssv2/frame_lists/train.csv), [val](https://dl.fbaipublicfiles.com/pyslowfast/dataset/ssv2/frame_lists/val.csv)).
 
 3. Extract the frames from downloaded videos at 30 FPS. We used ffmpeg-4.1.3 with command:
-	```
-	ffmpeg -i "${video}" -r 30 -q:v 1 "${out_name}"
-	```
+    ```
+    ffmpeg -i "${video}" -r 30 -q:v 1 "${out_name}"
+    ```
 4. The extracted frames should be organized to be consistent with the paths in frame lists.
-
-
-
