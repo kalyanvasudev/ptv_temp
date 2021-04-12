@@ -8,4 +8,6 @@ from pytorchvideo.models.hub import (  # noqa: F401, E402
     x3d_m,
     x3d_s,
     x3d_xs,
+    efficient_x3d_xs,
+    efficient_x3d_s,
 )
