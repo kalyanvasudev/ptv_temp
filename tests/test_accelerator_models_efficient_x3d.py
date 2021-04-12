@@ -21,9 +21,6 @@ class TestEfficientX3d(unittest.TestCase):
         """
         for (expansion, input_clip_length, input_crop_size,) in [
             ("XS", 4, 160),
-            ("S", 13, 160),
-            ("M", 16, 224),
-            ("L", 16, 312),
         ]:
             model = create_x3d(expansion=expansion)
 
