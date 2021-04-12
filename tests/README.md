@@ -1,5 +1,9 @@
 ## Unit Tests
 
+
+Before running the tests, please ensure that you installed the necessary additional test dependencies. 
+If not installed, check the [install-README](https://github.com/facebookresearch/pytorchvideo/blob/master/INSTALL.md) on how to do it.
+
 To run the unittests, please run the following command:
 ```
 # From root of the project

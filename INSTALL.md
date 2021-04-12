@@ -57,3 +57,12 @@ conda create -n pytorchvideo python=3.7
 conda activate pytorchvideo
 conda install -c pytorch pytorch=1.8.0 torchvision cudatoolkit=10.2
 ```
+
+## Testing
+
+Please follow the instructions mentioned in [test-README](https://github.com/facebookresearch/pytorchvideo/blob/master/tests/README.md) to run the provided tests.
+
+## Linting
+
+We also provide a linting script to correctly format your code edits.
+Please follow the instructions mentioned in [dev-README](https://github.com/facebookresearch/pytorchvideo/blob/master/dev/README.md) to run the linter.
