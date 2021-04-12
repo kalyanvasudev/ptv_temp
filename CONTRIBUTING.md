@@ -12,6 +12,16 @@ We actively welcome your pull requests.
 5. Make sure your code lints.
 6. If you haven't already, complete the Contributor License Agreement ("CLA").
 
+## Testing
+
+Please follow the instructions mentioned in [test-README](https://github.com/facebookresearch/pytorchvideo/blob/master/tests/README.md) to run the existing and your newly added tests.
+
+## Linting
+
+We provide a linting script to correctly format your code changes.
+Please follow the instructions mentioned in [dev-README](https://github.com/facebookresearch/pytorchvideo/blob/master/dev/README.md) to run the linter.
+
+
 ## Contributor License Agreement ("CLA")
 In order to accept your pull request, we need you to submit a CLA. You only need
 to do this once to work on any of Facebook's open source projects.

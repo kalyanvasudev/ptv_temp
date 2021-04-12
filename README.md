@@ -3,17 +3,17 @@
 </p>
 
 <p align="center">
-   <a href="https://github.com/facebookresearch/pytorchvideo/blob/oss_website_docs/LICENSE">
+   <a href="https://github.com/facebookresearch/pytorchvideo/blob/master/LICENSE">
     <img src="https://img.shields.io/pypi/l/pytorchvideo" alt="CircleCI" />
   </a>
    <a href="https://pypi.org/project/pytorchvideo/">
     <img src="https://img.shields.io/pypi/v/pytorchvideo?color=blue&label=release" alt="CircleCI" />
   </a>
-    <a href="https://circleci.com/gh/facebookresearch/pytorchvideo/tree/oss_website_docs">
-    <img src="https://img.shields.io/circleci/build/github/facebookresearch/pytorchvideo/oss_website_docs?token=efdf3ff5b6f6acf44f4af39b683dea31d40e5901" alt="Coverage" />
+    <a href="https://circleci.com/gh/facebookresearch/pytorchvideo/tree/master">
+    <img src="https://img.shields.io/circleci/build/github/facebookresearch/pytorchvideo/master?token=efdf3ff5b6f6acf44f4af39b683dea31d40e5901" alt="Coverage" />
   </a>
-    <a href="https://codecov.io/gh/facebookresearch/pytorchvideo/branch/oss_website_docs">
-    <img src="https://codecov.io/gh/facebookresearch/pytorchvideo/branch/oss_website_docs/graph/badge.svg?token=OSZSI6JU31"/>
+    <a href="https://codecov.io/gh/facebookresearch/pytorchvideo/branch/master">
+    <img src="https://codecov.io/gh/facebookresearch/pytorchvideo/branch/master/graph/badge.svg?token=OSZSI6JU31"/>
   </a>
   <p align="center">
     <i> A deep learning library for video understanding research.</i>
